@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class SortStringPipe implements PipeTransform {
   transform(array: Array<any>, orderField: string, orderType: boolean): Array<string> {
-    console.log('PIPE:', typeof array, ', Order:', orderType);
+    // console.log('PIPE:', typeof array, ', Order:', orderType);
     if (array === undefined) return array;
     array.sort((a: any, b: any) => {
         let ae = a[orderField];
@@ -17,8 +17,7 @@ export class SortStringPipe implements PipeTransform {
         if (ae == be) return 0;
         return orderType ? (ae.toString().toLowerCase() > be.toString().toLowerCase() ? -1 : 1) : (be.toString().toLowerCase() > ae.toString().toLowerCase() ? -1 : 1);
     });
-    console.log('PIPE sort: ', array);
-    
+    // console.log('PIPE sort: ', array); 
     return array;
   }
 }
