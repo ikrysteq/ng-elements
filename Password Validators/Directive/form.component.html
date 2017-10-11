@@ -1,0 +1,6 @@
+<!-- password must contains at least 6 characters -->
+<!-- (ngModelChange) / (update) are new EventEmitters -->
+<input [(ngModel)]="user.password" #password="ngModel" (ngModelChange)="inputChange($event)" maxlength="255" type="password" name="password" placeholder="" pattern=".{6,}" required />
+
+<!-- validateEqual attribute -->
+<input class="login" [(ngModel)]="user.confirmPassword" #confirmPassword="ngModel" (update)="inputChange($event)" maxlength="255" type="password" name="confirmPassword" placeholder="" pattern=".{6,}" validateEqual="password" required />
