@@ -4,7 +4,7 @@
 
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { PasswordValidation } from './formBuilderPasswordValidator';
+import { PasswordValidation } from './passwordValidator';
 
 @Component({
   selector: 'app-password-match',
