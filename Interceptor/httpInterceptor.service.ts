@@ -56,7 +56,7 @@ export class HttpInterceptorService implements HttpInterceptor {
           this.router.navigate(['/login']);
         }
       }
-
+      return Observable.throw(err);      
     });
   }
 }
